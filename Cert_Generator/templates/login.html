@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+<body>
+        <div class="register">
+            </div>
+            <div class="registerForm">
+              <div class="form shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="alert alert-primary" role="alert">
+                  Hi there!
+                </div>
+                <form method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter username" name="username">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                  </div>
+                  <div class="form-group">
+                    <div class="statusBox">
+                      <div class="alert {{ status }}" id=msg role="alert">
+                        {{ message }}
+                      </div>
+                      <button type="submit" class="btn btn-danger">Login</button>
+                    </div>
+                  </div>  
+                </form>
+              <div class="changeAuth">
+                <p>Haven't registered yet,
+                  <a href="{% url 'register' %}">Register here</a>
+                </p>
+               </div>
+              </div>
+            </div>   
+</body>
+</html>
