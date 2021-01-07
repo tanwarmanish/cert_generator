@@ -61,7 +61,7 @@ keyrings.alt==3.1.1
 kiwisolver==1.0.1
 ldap3==2.4.1
 LibAppArmor==2.13.1
-lxml==4.2.5
+lxml==4.6.2
 Mako==1.0.7
 Markdown==3.0.1
 MarkupSafe==1.0
